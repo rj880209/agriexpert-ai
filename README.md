@@ -1,156 +1,272 @@
-# 🌾 AgriExpert AI — Smart Farming Assistant
+# 🌾 AgriExpert AI — Your Smart Farming Companion
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/your-repo/agri-expert-ai/main/app.py)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**AgriExpert AI** is an intelligent, AI-powered farming assistant designed to help farmers maximize crop yields, manage soil health, diagnose plant diseases, and adapt to weather conditions. Built with cutting-edge AI models from Groq, it provides personalized, data-driven advice in multiple languages.
-
-## ✨ Key Features
-
-### 💬 Conversational Chat
-- Ask any farming-related question with full conversational context.
-- Get expert advice on crop selection, irrigation, pest control, and more.
-- AI remembers previous interactions for personalized recommendations.
-
-### 🧪 Soil Nutrient Analysis
-- Input N-P-K values and pH levels for instant soil health assessment.
-- Receive tailored fertilizer recommendations and soil improvement plans.
-- Supports different soil types and target crops.
-
-### 📸 Leaf & Crop Disease Diagnosis
-- Upload photos of sick plants for AI-powered visual diagnosis.
-- Identify pests, diseases, and nutrient deficiencies with high accuracy.
-- Get organic and chemical treatment options with safety warnings.
-
-### 🌾 Smart Crop Recommender
-- Get crop suggestions based on location, climate, season, and water availability.
-- Includes yield estimates, cost-profit analysis, and risk assessments.
-- Factors in farm size and irrigation capabilities.
-
-### 🌦️ Weather Dashboard & Alerts
-- Real-time 7-day weather forecasts with frost and heavy rain alerts.
-- Automatic integration of weather data into all AI recommendations.
-- Visual dashboard showing temperature, rainfall, and wind conditions.
-
-### 🌐 Multi-Language Support
-- Responds in 16+ languages including English, Hindi, Kannada, Tamil, Telugu, Marathi, Bengali, Punjabi, Gujarati, Urdu, Spanish, Portuguese, French, Swahili, Chinese, and Indonesian.
-- Technical terms remain clear with English translations.
-
-## 🏗️ How It Works
-
-AgriExpert AI leverages advanced AI models to provide comprehensive farming assistance:
-
-1. **AI Models**: Uses Groq's `llama-3.3-70b-versatile` for text-based interactions and `meta-llama/llama-4-scout-17b-16e-instruct` for image analysis.
-
-2. **Weather Integration**: Fetches real-time weather data from Open-Meteo API (free, no API key required) to provide weather-aware advice.
-
-3. **System Prompt Engineering**: Employs a detailed system prompt that defines the AI as a senior agronomist, ensuring accurate and practical recommendations.
-
-4. **Session Management**: Maintains conversation history and user preferences across interactions.
-
-5. **Safety & Compliance**: Includes disclaimers for pesticide and fertilizer use, emphasizing local regulations.
-
-## 🛠️ Technologies Used
-
-- **Frontend**: Streamlit - for building the interactive web app
-- **AI Engine**: Groq API - for LLM and vision model inference
-- **Weather Data**: Open-Meteo API - for location-based forecasts
-- **Image Processing**: Pillow - for handling uploaded images
-- **HTTP Requests**: Requests library - for API calls
-- **Styling**: Custom CSS with Google Fonts for an earthy, farming-themed UI
-
-## 📋 Prerequisites
-
-- Python 3.8 or higher
-- A free Groq API key (sign up at [console.groq.com](https://console.groq.com))
-- Internet connection for weather data and AI inference
-
-## 🚀 Installation & Setup
-
-1. **Clone or download the repository**:
-   ```bash
-   git clone https://github.com/your-username/agri-expert-ai.git
-   cd agri-expert-ai
-   ```
-
-2. **Create a virtual environment** (recommended):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Get your Groq API key**:
-   - Visit [console.groq.com](https://console.groq.com)
-   - Sign up for a free account
-   - Generate an API key
-
-5. **Run the application**:
-   ```bash
-   streamlit run app.py
-   ```
-
-6. **Access the app**:
-   - Open your browser to `http://localhost:8501`
-   - Enter your Groq API key in the sidebar
-   - Start chatting!
-
-## 📖 Usage Guide
-
-### Getting Started
-1. Enter your Groq API key in the sidebar.
-2. (Optional) Set your preferred language for AI responses.
-3. (Optional) Enter your farm location to enable weather alerts.
-
-### Using the Tools
-- **Chat**: Type your farming question in the chat input or click quick-start cards.
-- **Soil Analysis**: Input your soil test values and click "Analyze Soil".
-- **Leaf Diagnosis**: Upload a plant photo and describe symptoms, then click "Diagnose".
-- **Crop Recommender**: Fill in your location, season, and conditions, then get recommendations.
-- **Weather Dashboard**: View your 7-day forecast and get AI analysis.
-
-### Tips for Best Results
-- Provide specific details (location, crop type, symptoms) for more accurate advice.
-- Use the weather integration for proactive farming decisions.
-- Upload clear, well-lit photos for disease diagnosis.
-
-## 🤝 Contributing
-
-We welcome contributions to improve AgriExpert AI! Here's how you can help:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Areas for Improvement
-- Add more crop-specific knowledge
-- Implement offline capabilities
-- Expand language support
-- Add integration with local agricultural databases
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- **Groq** for providing fast, affordable AI inference
-- **Open-Meteo** for free weather data
-- **Streamlit** for the amazing web app framework
-- Farmers worldwide for their invaluable knowledge and feedback
-
-## 📞 Support
-
-If you encounter issues or have suggestions:
-- Open an issue on GitHub
-- Check the troubleshooting section in our wiki
-- Contact the maintainers
+> **Transform your farming with AI-powered insights!** Get expert advice on crops, soil health, disease diagnosis, and weather—available in 16+ languages.
 
 ---
 
-**Built with ❤️ for farmers, by developers who care about sustainable agriculture.**
+## 🎯 What Can AgriExpert AI Do For You?
+
+<table>
+  <tr>
+    <td align="center">
+      <b>💬 Chat with AI Expert</b><br>
+      Ask any farming question<br>
+      Get instant answers
+    </td>
+    <td align="center">
+      <b>🧪 Analyze Soil</b><br>
+      Input N-P-K values<br>
+      Get fertilizer tips
+    </td>
+    <td align="center">
+      <b>📸 Diagnose Diseases</b><br>
+      Upload plant photos<br>
+      Identify problems
+    </td>
+    <td align="center">
+      <b>🌾 Recommend Crops</b><br>
+      Location-based suggestions<br>
+      Profit estimates
+    </td>
+    <td align="center">
+      <b>🌦️ Weather Alerts</b><br>
+      7-day forecasts<br>
+      Frost & rain warnings
+    </td>
+  </tr>
+  <tr>
+    <td align="center">🗣️</td>
+    <td align="center">🔬</td>
+    <td align="center">🩺</td>
+    <td align="center">🌱</td>
+    <td align="center">⛈️</td>
+  </tr>
+</table>
+
+---
+
+## ✨ Why Farmers Love AgriExpert AI
+
+### 🌍 **Multilingual Support**
+Speak your language! Choose from **16+ languages**:
+- 🇮🇳 Hindi, Kannada, Tamil, Telugu, Marathi, Bengali, Punjabi, Gujarati, Urdu
+- 🇺🇸 English | 🇪🇸 Spanish | 🇵🇹 Portuguese | 🇫🇷 French | 🇰🇪 Swahili | 🇨🇳 Chinese | 🇮🇩 Indonesian
+
+> 💡 *Technical terms are always shown with English translations for clarity.*
+
+### 🤖 **Powered by Cutting-Edge AI**
+- **Llama 3.3 70B** for detailed text conversations
+- **Llama 4 Scout** for accurate image-based disease diagnosis
+- Real-time weather data from **Open-Meteo** (no API key needed!)
+
+### 🎨 **Beautiful, Intuitive Interface**
+- Clean, earthy design inspired by nature
+- Easy-to-use tools with one-click actions
+- Mobile-friendly and accessible
+
+---
+
+## 🚀 Quick Start Guide
+
+### Step 1: Get Set Up (5 minutes)
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/agri-expert-ai.git
+cd agri-expert-ai
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Step 2: Get Your Free Groq API Key
+
+1. Visit [console.groq.com](https://console.groq.com)
+2. Sign up (it's free!)
+3. Generate an API key
+4. Copy it—you'll need it in the app!
+
+### Step 3: Run the App
+
+```bash
+streamlit run app.py
+```
+
+Then open your browser to **`http://localhost:8501`** 🎉
+
+---
+
+## 📖 How to Use Each Feature
+
+<details>
+<summary><b>💬 Chat with AI Expert</b> - Click to expand</summary>
+
+1. Enter your Groq API key in the sidebar
+2. Type your farming question (e.g., *"How do I prevent tomato blight?"*)
+3. Get instant, expert advice with full context awareness
+
+**Pro Tip:** Mention your location or crop type for more personalized answers!
+</details>
+
+<details>
+<summary><b>🧪 Soil Nutrient Analysis</b> - Click to expand</summary>
+
+1. Select the **Soil Analysis** tool
+2. Input your soil test results:
+   - Nitrogen (N), Phosphorus (P), Potassium (K) levels
+   - pH value
+   - Soil type (optional)
+3. Click **"Analyze Soil"**
+4. Receive customized fertilizer recommendations and improvement plans
+</details>
+
+<details>
+<summary><b>📸 Leaf & Crop Disease Diagnosis</b> - Click to expand</summary>
+
+1. Select the **Leaf/Crop Disease** tool
+2. Upload a clear photo of the affected plant
+3. Describe what you're seeing (yellow spots, wilting, etc.)
+4. Click **"Diagnose"**
+5. Get identification + organic & chemical treatment options
+
+**📸 Photo Tips:** Take pictures in good lighting, focus on affected areas, include both close-up and full plant views.
+</details>
+
+<details>
+<summary><b>🌾 Smart Crop Recommender</b> - Click to expand</summary>
+
+1. Select the **Crop Recommender** tool
+2. Fill in your details:
+   - Location (for climate data)
+   - Current season
+   - Water availability
+   - Farm size
+   - Irrigation method
+3. Get tailored crop suggestions with yield estimates and profit analysis!
+</details>
+
+<details>
+<summary><b>🌦️ Weather Dashboard</b> - Click to expand</summary>
+
+1. Enter your farm location in the sidebar
+2. View the **7-day forecast** with temperature, rainfall, and wind
+3. Receive automatic alerts for:
+   - ❄️ Frost warnings
+   - ⛈️ Heavy rain alerts
+4. All AI recommendations automatically factor in weather conditions!
+</details>
+
+---
+
+## 🛠️ Tech Stack
+
+| Component | Technology | Purpose |
+|-----------|------------|---------|
+| **Frontend** | [Streamlit](https://streamlit.io) | Interactive web interface |
+| **AI Engine** | [Groq API](https://groq.com) | Fast LLM inference |
+| **Vision Model** | Llama 4 Scout | Image-based disease diagnosis |
+| **Weather Data** | [Open-Meteo](https://open-meteo.com) | Free, accurate forecasts |
+| **Image Processing** | Pillow | Photo upload handling |
+| **Styling** | Custom CSS + Google Fonts | Beautiful, responsive UI |
+
+---
+
+## 📋 Requirements
+
+- ✅ Python 3.8 or higher
+- ✅ Free Groq API key ([get yours here](https://console.groq.com))
+- ✅ Internet connection (for weather data & AI)
+- ✅ Modern web browser (Chrome, Firefox, Safari, Edge)
+
+---
+
+## 🤝 Contributing
+
+We'd love your help making AgriExpert AI even better! Here's how:
+
+### 🌟 Ways to Contribute
+- 🐛 Report bugs or suggest features
+- 📝 Improve documentation or translations
+- 🌱 Add crop-specific knowledge
+- 🔌 Build integrations with agricultural databases
+- 🎨 Enhance the UI/UX
+
+### Quick Start for Contributors
+```bash
+# Fork the repo
+git checkout -b feature/your-amazing-idea
+# Make your changes
+git commit -m "Add amazing new feature"
+git push origin feature/your-amazing-idea
+# Open a Pull Request!
+```
+
+Check out our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+---
+
+## ❓ FAQ
+
+<details>
+<summary><b>Is this really free?</b></summary>
+Yes! The app is free and open-source. You only need a free Groq API key (they offer generous free tiers).
+</details>
+
+<details>
+<summary><b>How accurate is the disease diagnosis?</b></summary>
+Our AI model achieves high accuracy on common crop diseases, but we always recommend confirming with local agricultural experts for critical decisions.
+</details>
+
+<details>
+<summary><b>Can I use this offline?</b></summary>
+Currently, an internet connection is required for AI inference and weather data. Offline capabilities are planned for future releases!
+</details>
+
+<details>
+<summary><b>My language isn't listed. Can you add it?</b></summary>
+We support 16+ major languages already, but we're always expanding! Open an issue with your language request.
+</details>
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) — feel free to use, modify, and distribute!
+
+---
+
+## 🙏 Acknowledgments
+
+Special thanks to:
+- 🚀 **[Groq](https://groq.com)** for lightning-fast, affordable AI inference
+- 🌤️ **[Open-Meteo](https://open-meteo.com)** for free, reliable weather data
+- 📊 **[Streamlit](https://streamlit.io)** for the amazing web app framework
+- 👨‍🌾 **Farmers worldwide** for their invaluable knowledge and feedback
+
+---
+
+## 📞 Need Help?
+
+- 🐛 Found a bug? [Open an issue](https://github.com/your-username/agri-expert-ai/issues)
+- 💬 Have questions? Check our [Wiki](https://github.com/your-username/agri-expert-ai/wiki)
+- 📧 Contact the maintainers via GitHub
+
+---
+
+<div align="center">
+
+### 🌾 Built with ❤️ for farmers, by developers who care about sustainable agriculture.
+
+**Star ⭐ this repo if you find it useful!**
+
+[Report Bug](https://github.com/your-username/agri-expert-ai/issues) · [Request Feature](https://github.com/your-username/agri-expert-ai/issues) · [View Demo](https://share.streamlit.io/your-repo/agri-expert-ai/main/app.py)
+
+</div>
