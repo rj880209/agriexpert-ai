@@ -33,6 +33,7 @@ st.set_page_config(
     page_icon=APP_CONFIG["page_icon"],
     layout=APP_CONFIG["layout"],
     initial_sidebar_state=APP_CONFIG["initial_sidebar_state"],
+    menu_items=APP_CONFIG.get("menu_items"),
 )
 
 # ─── Custom CSS ──────────────────────────────────────────────

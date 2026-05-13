@@ -8,9 +8,13 @@ APP_CONFIG = {
     "page_icon": "🌾",
     "layout": "wide",
     "initial_sidebar_state": "expanded",
+    "menu_items": {
+        "About": "# AgriExpert AI\n\n**Your intelligent farming companion powered by AI.**\n\nBuilt with ❤️ for farmers worldwide.\n\n- 🌱 Crop recommendations based on your location\n- 🧪 Soil health analysis & improvement tips\n- 📸 Leaf disease diagnosis from photos\n- 🌦️ Real-time weather alerts (frost & heavy rain)\n- 💬 Multilingual support (16+ languages)\n\n---\n\n### Technology Stack\n- **AI Engine**: Groq Llama 3.3 70B\n- **Vision**: Llama 4 Scout\n- **Weather Data**: Open-Meteo API\n- **Framework**: Streamlit\n\n---\n\n### Version Info\n**v2.0** - Enhanced UI with animations & interactive elements\n\n*Empowering farmers with data-driven agriculture*",
+        "Get Help": "mailto:support@agriexpert.ai",
+    },
 }
 
-# Color Palette - Earthy Farming Aesthetic
+# Color Palette - Earthy Farming Aesthetic with Premium Gradients
 COLORS = {
     # Soil tones
     "soil_dark": "#3E2723",
@@ -31,6 +35,11 @@ COLORS = {
     "warm_white": "#FFFDF5",
     "parchment": "#F5F0E1",
     "field_green": "#E8F5E9",
+    # Premium accent colors for enhanced UI
+    "harvest_gold": "#FFB300",
+    "morning_dew": "#E0F7FA",
+    "earth_red": "#BF360C",
+    "crop_yellow": "#FFF59D",
 }
 
 # Language Options
