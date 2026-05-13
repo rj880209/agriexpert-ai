@@ -129,3 +129,34 @@ def render_footer():
 """,
         unsafe_allow_html=True,
     )
+
+
+def render_metric_card(icon: str, value: str, label: str) -> str:
+    """Return HTML for an animated metric card with icon."""
+    return f"""
+    <div class="metric-card">
+        <div class="metric-icon">{icon}</div>
+        <div class="metric-value">{value}</div>
+        <div class="metric-label">{label}</div>
+    </div>
+    """
+
+
+def render_info_box(title: str, content: str) -> str:
+    """Return HTML for an animated info box with lightbulb icon."""
+    return f"""
+    <div class="info-box">
+        <strong>{title}</strong><br>
+        {content}
+    </div>
+    """
+
+
+def render_warning_box(title: str, content: str) -> str:
+    """Return HTML for an animated warning box with alert icon."""
+    return f"""
+    <div class="warning-box">
+        <strong>{title}</strong><br>
+        {content}
+    </div>
+    """

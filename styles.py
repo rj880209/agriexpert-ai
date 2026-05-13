@@ -661,5 +661,145 @@ def get_css_styles() -> str:
         border-color: {COLORS['leaf_medium']} !important;
         background: rgba(67,160,71,0.05) !important;
     }}
+
+    /* ═══════════════════════════════════════════════════════════
+       CUSTOM SCROLLBAR - PREMIUM LOOK
+       ═══════════════════════════════════════════════════════════ */
+    ::-webkit-scrollbar {{
+        width: 10px;
+        height: 10px;
+    }}
+    ::-webkit-scrollbar-track {{
+        background: {COLORS['parchment']};
+        border-radius: 10px;
+    }}
+    ::-webkit-scrollbar-thumb {{
+        background: linear-gradient(180deg, {COLORS['soil_medium']}, {COLORS['leaf_medium']});
+        border-radius: 10px;
+        border: 2px solid {COLORS['parchment']};
+    }}
+    ::-webkit-scrollbar-thumb:hover {{
+        background: linear-gradient(180deg, {COLORS['soil_dark']}, {COLORS['leaf_dark']});
+    }}
+
+    /* Firefox scrollbar */
+    * {{
+        scrollbar-width: thin;
+        scrollbar-color: {COLORS['leaf_medium']} {COLORS['parchment']};
+    }}
+
+    /* ═══════════════════════════════════════════════════════════
+       LOADING SPINNER ENHANCEMENT
+       ═══════════════════════════════════════════════════════════ */
+    div[data-testid="stSpinner"] {{
+        color: {COLORS['leaf_dark']} !important;
+    }}
+    div[data-testid="stSpinner"] svg {{
+        filter: drop-shadow(0 2px 8px rgba(46,125,50,0.3));
+    }}
+
+    /* ═══════════════════════════════════════════════════════════
+       METRIC CARDS FOR WEATHER DASHBOARD
+       ═══════════════════════════════════════════════════════════ */
+    .metric-card {{
+        background: linear-gradient(135deg, {COLORS['warm_white']}, {COLORS['morning_dew']});
+        border: 2px solid #E0F2F1;
+        border-radius: 16px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        position: relative;
+        overflow: hidden;
+    }}
+    .metric-card::before {{
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, {COLORS['sky_blue']}, {COLORS['leaf_medium']});
+        transform: scaleX(0);
+        transition: transform 0.4s ease;
+    }}
+    .metric-card:hover::before {{
+        transform: scaleX(1);
+    }}
+    .metric-card:hover {{
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 12px 32px rgba(2,136,209,0.2);
+        border-color: {COLORS['sky_blue']};
+    }}
+    .metric-value {{
+        font-size: 2rem;
+        font-weight: 900;
+        color: {COLORS['soil_dark']};
+        font-family: 'Merriweather', serif !important;
+        margin-bottom: 0.3rem;
+    }}
+    .metric-label {{
+        font-size: 0.85rem;
+        color: {COLORS['soil_light']};
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }}
+    .metric-icon {{
+        font-size: 2.5rem;
+        display: block;
+        margin-bottom: 0.5rem;
+        animation: leafFloat 3s ease-in-out infinite;
+    }}
+
+    /* ═══════════════════════════════════════════════════════════
+       INFO BOXES WITH ICONS
+       ═══════════════════════════════════════════════════════════ */
+    .info-box {{
+        background: linear-gradient(135deg, {COLORS['crop_yellow']}, #FFFDE7);
+        border-left: 5px solid {COLORS['wheat_gold']};
+        border-radius: 12px;
+        padding: 1.2rem 1.5rem;
+        margin: 1rem 0;
+        box-shadow: 0 2px 8px rgba(249,168,37,0.15);
+        animation: slideInRight 0.5s ease-out;
+        position: relative;
+    }}
+    .info-box::before {{
+        content: '💡';
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 1.8rem;
+        opacity: 0.3;
+        animation: pulse 2s ease-in-out infinite;
+    }}
+    .info-box strong {{
+        color: {COLORS['soil_dark']};
+        font-family: 'Merriweather', serif;
+    }}
+
+    /* Warning box variant */
+    .warning-box {{
+        background: linear-gradient(135deg, #FFEBEE, #FFCDD2);
+        border-left: 5px solid {COLORS['earth_red']};
+        border-radius: 12px;
+        padding: 1.2rem 1.5rem;
+        margin: 1rem 0;
+        box-shadow: 0 2px 8px rgba(191,54,12,0.15);
+        animation: slideInLeft 0.5s ease-out;
+        position: relative;
+    }}
+    .warning-box::before {{
+        content: '⚠️';
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 1.8rem;
+        opacity: 0.3;
+        animation: bounce 2s ease-in-out infinite;
+    }}
+    .warning-box strong {{
+        color: {COLORS['earth_red']};
+        font-family: 'Merriweather', serif;
+    }}
 </style>
 """
